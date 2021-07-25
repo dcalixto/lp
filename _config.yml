@@ -1,0 +1,115 @@
+# Basic settings
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "" # the name of your site, e.g. ACME Corp.
+description: ""
+  
+tagline: ""
+  
+lang: "pt-br"
+# Build settings
+markdown: kramdown
+
+# Kramdown options
+kramdown:
+  # Prevent IDs from being added to h1-h6 tags
+  auto_ids: false
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-menus
+  - jekyll-sitemap
+paginate: 12
+paginate_path: products/page:num/
+#paginate: 3
+#paginate_path: cachacas/page:num/
+
+
+
+
+
+source: .
+destination: ./_site
+# Compress CSS
+sass:
+  style: :compressed
+  sass_dir: _sass
+
+collections:
+  products:
+    output: true
+    permalink: /product/:title
+  slides:
+    #output: true
+    #permalink: /licor/:title
+
+include:
+
+  - _slides
+  
+section: true
+
+# set to 'true' to enable Netlify CMS (/admin) in production builds
+netlifycms: false
+
+# set to 'true' to enable Google Analytics tracking code in production builds
+analytics: false
+
+# Compress HTML (in liquid via layouts/compress.html)
+compress_html:
+  clippings: all
+
+# Social
+
+social:
+  name: vitrineonline
+  links:
+    #- https://twitter.com/casahelio
+    - https://www.facebook.com/vitrineonline
+
+# set some common post defaults
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "products" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "product" # set the correct default template for a post
+      section: "product" # set the root section name
+  -
+    scope:
+      path: ""
+      type: "cachacas" # previously `page` in Jekyll 2.2.
+    values:
+      layout: "cachaca" # overrides previous default layout
+      author: "cachaca"
+
+  -
+    scope:
+      path: ""
+      type: "licores" # previously `page` in Jekyll 2.2.
+    values:
+      layout: "licor" # overrides previous default layout
+      author: "licor"
+
+
+# Include in processing (e.g. Netlify directives)
+# Uncomment before use
+
+#include:
+#  - _redirects
+#  - _headers
+
+# Exclude from processing.
+# The following items will not be processed.
+exclude:
+  - README.md
+  - LICENSE.txt
+  - netlify.toml
+  - feed.xml
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
