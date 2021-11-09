@@ -1,5 +1,5 @@
 ---
 layout: home
-title: casas.com
+title: Brasil Sorte
 ---
 

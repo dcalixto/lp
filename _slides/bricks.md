@@ -1,7 +1,7 @@
 ---
-heading: Promova seu negócio 😉
-t1:  Mostre seu trabalho
-t2:  Abra sua loja virtual 
+heading: 
+t1:  
+t2:  
 
-image: /photos/1.jpg
+image: /photos/sorte1.svg
 ---

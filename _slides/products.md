@@ -1,7 +1,7 @@
 ---
-heading: Gerencie e impulsione o seu negócio online
+heading: 
 
-t1: Construa relacionamentos com clientes 😉
-t2: Aceite pagamentos diretamente em seu site
-image: /photos/3.jpg
+t1: 
+t2: 
+image: /photos/sorte4.jpg
 ---
