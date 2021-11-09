@@ -1,11 +1,12 @@
-<div class="container mx-auto flex  md:my-2  ">
+<div class=" ">
     <div class="swiper-container w-100">
-        <!-- Additional required wrapper -->
+        <!-- Additional required wrapp
+        er -->
         <div class="swiper-wrapper">
             <!-- Slides -->
             {% for slide in site.slides limit:5 %}
                 <div class="swiper-slide">
-                    <img style="height:350px" src="{{ slide.image }}" />
+                    <img class="object-contain md:object-scale-down ..." style="max-height:450px; width:100% " src="{{ slide.image }}" />
                     
                 </div>
             {% endfor %}
